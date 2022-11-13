@@ -1,0 +1,290 @@
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="wpOceans" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/images/favicon.png"
+    />
+    <title>SaurabhCoded - Web Developer and Designer</title>
+    <link href="/assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/css/flaticon.css" rel="stylesheet" />
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="/assets/css/animate.css" rel="stylesheet" />
+    <link href="/assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="/assets/css/owl.theme.css" rel="stylesheet" />
+    <link href="/assets/css/slick.css" rel="stylesheet" />
+    <link href="/assets/css/slick-theme.css" rel="stylesheet" />
+    <link href="/assets/css/swiper.min.css" rel="stylesheet" />
+    <link href="/assets/css/nice-select.css" rel="stylesheet" />
+    <link href="/assets/css/owl.transitions.css" rel="stylesheet" />
+    <link href="/assets/css/jquery.fancybox.css" rel="stylesheet" />
+    <link href="/assets/css/odometer-theme-default.css" rel="stylesheet" />
+    <link href="/assets/sass/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
+  </head>
+
+  <body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+      <!-- start preloader -->
+      <div class="preloader">
+        <div class="vertical-centered-box">
+          <div class="content">
+            <div class="loader-circle"></div>
+            <div class="loader-line-mask">
+              <div class="loader-line"></div>
+            </div>
+            <img src="/assets/images/preloader.png" alt="preloader" />
+          </div>
+        </div>
+      </div>
+      <!-- end preloader -->
+      <!-- Start header -->
+      <header id="header" class="wpo-header-style-1">
+        <div class="wpo-site-header">
+          <nav class="navigation navbar navbar-expand-lg navbar-light">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
+                  <div class="mobail-menu">
+                    <button type="button" class="navbar-toggler open-btn">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar first-angle"></span>
+                      <span class="icon-bar middle-angle"></span>
+                      <span class="icon-bar last-angle"></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                  <div class="navbar-header">
+                    <a class="navbar-brand site-logo fs-3 lh-1" href="/"><img
+                        src="/assets/images/logo.png"
+                        style="width:70px"
+                        alt="footer_logo"
+                      />Saurabh
+                      <br />
+                      Coded</a>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-md-1 col-1">
+                  <div
+                    id="navbar"
+                    class="collapse navbar-collapse navigation-holder"
+                  >
+                    <button class="menu-close"><i class="ti-close"></i></button>
+                    <ul class="nav navbar-nav mb-2 mb-lg-0">
+                      <li>
+                        <a class="{{#if active.home}}active{{/if}}" href="/">Home</a>
+                      </li>
+                      <li>
+                        <a href="/about" class="{{#if active.about}}active{{/if}}">About</a>
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a href="/services" class="{{#if active.services}}active{{/if}}">Services</a>
+                        <ul class="sub-menu">
+                          {{#each service}}
+                          <li><a href="/services/{{this.slug}}">{{this.title}}</a></li>
+                          {{/each}}
+                        </ul>
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a href="/portfolio" class="{{#if active.portfolio}}active{{/if}}">Portfolio</a>
+                        <ul class="sub-menu">
+                          {{#each work}}
+                            <li><a href="/portfolio/{{this.slug}}">{{this.title}}</a></li>
+                          {{/each}}
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="/contact" class="{{#if active.contact}}active{{/if}}">Contact</a>
+                      </li>
+                    </ul>
+
+                  </div><!-- end of nav-collapse -->
+                </div>
+                <div class="col-lg-2 col-md-2 col-2">
+                  <div class="header-right">
+                    <div class="header-btn">
+                      <a
+                        class="theme-btn"
+                        download="Saurabhsharma_resume_9310259192"
+                        href="/assets/Resume.pdf"
+                        title="ImageName"
+                      >
+                        Resume
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- end of container -->
+          </nav>
+        </div>
+      </header>
+      <!-- end of header -->
+
+      {{{body}}}
+      <!-- start wpo-site-footer -->
+      <footer class="wpo-site-footer">
+        {{#if active.home}}
+            <div class="upper-contact-area">
+            <div class="container">
+                <div class="contact-grids">
+                <div class="row align-items-center">
+                    <div class="col col-lg-6">
+                    <h2>Send me a message and make something together.</h2>
+                    </div>
+                    <div class="col col-lg-6">
+                    <div class="send-message-btn">
+                        <a class="theme-btn" href="/contact">Contact Us</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="left-shape"></div>
+                </div>
+            </div>
+            </div>
+        {{/if}}
+        <div class="upper-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col col-lg-4 col-md-6 col-12">
+                <div class="widget about-widget">
+                  <div class="logo widget-title">
+                    <a class="site-logo fs-3 lh-1" href="/"><img
+                        src="/assets/images/logo.png"
+                        style="width: 70px;"
+                        alt="logo"
+                      />Saurabh<br />Coded</a>
+                  </div>
+                  <p>Highly motivated, self-starting developer building web applications and services. Familiar with development and deployment process for many web-based technologies. </p>
+                  <div class="social-icons">
+                    <ul>
+                      <li><a href="https://www.facebook.com/profile.php?id=100087768161054" target="_blank"><i class="ti-facebook"></i></a></li>
+                      <li><a href="https://twitter.com/Saurabh68670971" target="_blank"><i class="ti-twitter-alt"></i></a></li>
+                      <li><a href="https://www.linkedin.com/in/saurabh-sharma-3526aa20a/" target="_blank"><i class="ti-linkedin"></i></a></li>
+                      <li><a href="https://www.instagram.com/saurabhcoded/" target="_blank"><i class="ti-instagram"></i></a></li>
+                      <li><a href="https://wa.me/919310259192"><i class="bi bi-whatsapp"></i></a></li>
+                      <li><a href="https://discordapp.com/users/saurabhcoded#1423" target="_blank"><i class="bi bi-discord"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-lg-2 col-md-6 col-12">
+                <div class="widget link-widget">
+                  <div class="widget-title">
+                    <h3>Navigation</h3>
+                  </div>
+                  <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/contact">Contact us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col col-lg-3 col-md-6 col-12">
+                <div class="widget link-widget service-link-widget">
+                  <div class="widget-title">
+                    <h3>All Services</h3>
+                  </div>
+                  <ul>
+                    {{#each service}}
+                    <li><a href="/services/{{this.slug}}">{{this.title}}</a></li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+              <div class="col col-lg-3 col-md-6 col-12">
+                <div class="widget link-widget service-link-widget">
+                  <div class="widget-title">
+                    <h3>Recent Project</h3>
+                  </div>
+                  <ul>
+                    {{#each work}}
+                    <li><a href="/portfolio/{{this.slug}}">{{this.title}}</a></li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end container -->
+          <div class="shadow-shape">
+            <svg width="1319" height="1567" viewBox="0 0 1319 1567" fill="none">
+              <g filter="url(#filter0_f_39_3833)">
+                <circle
+                  cx="803"
+                  cy="803"
+                  r="303"
+                  fill="#59C378"
+                  fill-opacity="0.5"
+                ></circle>
+              </g>
+              <defs>
+                <filter
+                  id="filter0_f_39_3833"
+                  x="0"
+                  y="0"
+                  width="1606"
+                  height="1606"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="250"
+                    result="effect1_foregroundBlur_39_3832"
+                  ></feGaussianBlur>
+                </filter>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="lower-footer">
+          <div class="container">
+            <div class="row">
+              <div class="separator"></div>
+              <p class="copyright">Copyright &copy; 2022-2023 saurabhcoded. All rights
+                reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end wpo-site-footer -->
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins for this template -->
+    <script src="/assets/js/modernizr.custom.js"></script>
+    <script src="/assets/js/jquery.dlmenu.js"></script>
+    <script src="/assets/js/jquery-plugin-collection.js"></script>
+    <!-- Moving Animation -->
+    <script src="/assets/js/moving-animation.js"></script>
+    <!-- Custom script for this template -->
+    <script src="/assets/js/script.js"></script>
+  </body>
+
+</html>

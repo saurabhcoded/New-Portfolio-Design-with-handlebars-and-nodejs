@@ -1,0 +1,61 @@
+<!-- start wpo-page-title -->
+<section class="wpo-page-title">
+  <div class="container">
+    <div class="row">
+      <div class="col col-xs-12">
+        <div class="wpo-breadcumb-wrap">
+          <h2>Portfolio</h2>
+          <ol class="wpo-breadcumb-wrap">
+            <li><a href="/">Home</a></li>
+            <li>Portfolio</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end container -->
+</section>
+<!-- end page-title -->
+
+<!-- protfolio area start -->
+<div class="wpo-protfolio-area section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col col-xs-12 sortable-gallery">
+        <div class="gallery-container gallery-fancybox masonry-gallery row">
+           {{#each work}}
+           <div
+            class="col-lg-4 col-md-6 col-12 custom-grid wow zoomIn"
+            data-wow-duration="2000ms"
+          >
+            <div class="">
+              <div class="wpo-protfolio-single">
+                <div class="wpo-protfolio-img">
+                  <img src="{{this.image}}" alt="{{this.title}}" />
+                </div>
+                <div class="wpo-protfolio-text">
+                  <h2>{{this.title}}</h2>
+                  <div>
+                    {{#each this.tags}} <span
+                      class="d-inline-block border-end px-2"
+                    >{{this}}</span>{{/each}}  
+                  </div>
+                  <a href="/portfolio/{{this.slug}}">View Work</a>
+                </div>
+              </div>
+            </div>
+            </div>
+            {{/each}}
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+  </div>
+</div>
+
+<!-- start of wpo-site-footer-section -->
+
+<!-- wpo-partners-area-start -->
+{{> brands}}
+<!-- partners-area-end -->

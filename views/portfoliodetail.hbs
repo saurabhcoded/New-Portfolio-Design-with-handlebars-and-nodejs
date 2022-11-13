@@ -1,0 +1,162 @@
+<!-- start wpo-page-title -->
+<section class="wpo-page-title">
+  <div class="container">
+    <div class="row">
+      <div class="col col-xs-12">
+        <div class="wpo-breadcumb-wrap">
+          <h2>Portfolio Single</h2>
+          <ol class="wpo-breadcumb-wrap">
+            <li><a href="/">Home</a></li>
+            <li>Portfolio</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end container -->
+</section>
+<!-- end page-title -->
+
+<!-- wpo-project-single-area start -->
+<div class="wpo-project-single-area section-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-12">
+        <div class="wpo-project-single-wrap">
+          <div class="wpo-project-single-item">
+            <div class="row align-items-start">
+              <div class="col-lg-7">
+                <div class="wpo-project-single-title">
+                  <h3>{{portfoliodetail.title}}</h3>
+                </div>
+                <p>{{portfoliodetail.paragraph1}}</p>
+                <p>{{portfoliodetail.paragraph2}}</p>
+                <p>{{portfoliodetail.paragraph3}}</p>
+              </div>
+               <div class="col-lg-5">
+                <div class="wpo-project-single-content-des-right">
+                  <ul>
+                    <li>Start Date :<span>{{portfoliodetail.datestart}}</span></li>
+                    <li>Completion :<span>{{portfoliodetail.dateend}}</span></li>
+                    <li>Share :<span>
+                      <!-- AddToAny BEGIN -->
+                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                        <a class="a2a_dd m-1" href="https://www.addtoany.com/share"></a>
+                        <a class="a2a_button_facebook m-1"></a>
+                        <a class="a2a_button_twitter m-1"></a>
+                        <a class="a2a_button_email m-1"></a>
+                        <a class="a2a_button_whatsapp m-1"></a>
+                        <a class="a2a_button_linkedin m-1"></a>
+                        </div>
+                        <script async src="https://static.addtoany.com/menu/page.js"></script>
+                    <!-- AddToAny END -->
+                    </span>
+                    </li>
+                  </ul>
+                </div>
+              </div> 
+            </div>
+            <div class="wpo-project-single-main-img owl-carousel mt-2">
+              {{#each portfoliodetail.images}}
+              <img src="{{this}}" alt="" class="w-100 d-block" />
+              {{/each}}
+            </div>
+          </div>
+          <div class="wpo-project-single-item list-widget">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="wpo-project-single-title">
+                  <h3>Used technologies</h3>
+                </div>
+                <ul>
+                  {{#each portfoliodetail.tags}}
+                  <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="wpo-project-single-gallery">
+             <div class="wpo-project-single-title">
+                  <h3>Project Gallery</h3>
+                </div>
+            <div class="row mt-4">
+                 {{#each portfoliodetail.images}}
+              <div class="col-md-6 col-sm-6 col-12">
+                <div class="wpo-p-details-img">
+                  <img src="{{this}}" alt="{{portfoliodetail.slug}}" />
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+          <div class="wpo-project-single-item">
+            <div class="wpo-project-contact-area">
+              <div class="wpo-contact-title">
+                <h2>Have project in mind? Let's discuss</h2>
+                <p>Get in touch with us to see how we can help you with your
+                  project</p>
+              </div>
+              <div class="wpo-contact-form-area">
+                <form
+                  method="post"
+                  action="/contact"   
+                  >
+                  <div class="row">
+                    <div class="col col-lg-6 col-md-6 col-12">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Your Name*"
+                      />
+                    </div>
+                    <div class="col col-lg-6 col-md-6 col-12">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        placeholder="Your Email*"
+                      />
+                    </div>
+                    <div class="col col-lg-6 col-md-6 col-12">
+                      <input
+                        type="phone"
+                        class="form-control"
+                        name="contact"
+                        placeholder="Your Contact Number*"
+                      />
+                    </div>
+                    <div class="col col-lg-6 col-md-6 col-12">
+                      <select name="service" class="form-control">
+                        <option disabled="disabled" selected="">Services</option>
+                        {{#each service}}<option value="{{this.title}}">{{this.title}}</option>{{/each}}
+                      </select>
+                    </div>
+                    <div class="fullwidth col col-lg-12 col-12">
+                      <textarea
+                        class="form-control"
+                        name="note"
+                        placeholder="Message..."
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="submit-area">
+                    <button type="submit" class="theme-btn-s2">Send Massege</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- wpo-service-single-area end -->
+{{> portfolioslider}}
+
+<!-- wpo-partners-area-start -->
+{{> brands}}
+<!-- partners-area-end -->

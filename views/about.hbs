@@ -1,0 +1,170 @@
+<!-- start wpo-page-title -->
+<section class="wpo-page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="wpo-breadcumb-wrap">
+                    <h2>About Me</h2>
+                    <ol class="wpo-breadcumb-wrap">
+                        <li><a href="/">Home</a></li>
+                        <li>About</li>
+                    </ol>
+                </div>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- end page-title -->
+<!-- start of wpo-about-area -->
+<div class="wpo-about-area-s2 section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-12 col-sm-12">
+                <div class="wpo-about-img">
+                    <img src="/assets/images/slider/1.jpg" alt="Hero">
+                    <div class="icon-1 floating-item"><img src="/assets/images/icon/node.png" alt="nodejs"></div>
+                    <div class="icon-2 floating-item"><img src="/assets/images/icon/react.png" alt="reactjs">
+                    </div>
+                    <div class="icon-3 floating-item"><img src="/assets/images/icon/next.png" alt="nextjs"></div>
+                    <div class="project floating-item">
+                        <div class="icon">
+                            <i class="fi flaticon-verified"></i>
+                        </div>
+                        <div class="p-text">
+                            <h3><span class="odometer" data-count="1500">00</span>+</h3>
+                            <p>Complete Project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1 col-md-12 col-sm-12">
+                {{> advantagesabout}}
+            </div>
+        </div>
+    </div>
+    <div class="ab-shape">
+        <svg width="995" height="1495" viewBox="0 0 995 1495" fill="none">
+            <g opacity="0.3" filter="url(#filter0_f_39_4267)">
+                <circle cx="247.5" cy="747.5" r="247.5" fill="#FFE500" />
+            </g>
+            <defs>
+                <filter id="filter0_f_39_4267" x="-500" y="0" width="1495" height="1495" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_39_4267" />
+                </filter>
+            </defs>
+        </svg>
+    </div>
+    <div class="line-shape-1">
+        <img src="/assets/images/about/shape1.png" alt="lineshape1">
+    </div>
+    <div class="line-shape-2">
+        <img src="/assets/images/about/shape2.png" alt="lineshape2">
+    </div>
+</div>
+<!-- end of wpo-about-area -->
+<!-- start of wpo-service-area -->
+<div class="wpo-service-area-s2 section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-12">
+                <div class="wpo-section-title">
+                    <h2>Popular Services</h2>
+                    <p>Must explain to you how all this mistaken idea of denouncing pleasure
+                        born and give you a complete account the system</p>
+                </div>
+            </div>
+        </div>
+        {{> serviceswrap}}
+
+    </div>
+    <div class="ab-shape">
+        <svg width="995" height="1495" viewBox="0 0 995 1495" fill="none">
+            <g opacity="0.3" filter="url(#filter0_f_39_4268)">
+                <circle cx="247.5" cy="747.5" r="247.5" fill="#FFE500" />
+            </g>
+            <defs>
+                <filter id="filter0_f_39_4268" x="-500" y="0" width="1495" height="1495" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_39_4267" />
+                </filter>
+            </defs>
+        </svg>
+    </div>
+</div>
+<!-- end of wpo-service-area -->
+
+<!-- start of wpo-work-area -->
+<div class="wpo-work-area section-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-12">
+        <div class="wpo-section-title">
+          <h2>My Work Experience</h2>
+          <p>Must explain to you how all this mistaken idea of denouncing
+            pleasure born and give you a complete account the system</p>
+        </div>
+      </div>
+    </div>
+    <div class="wpo-work-wrap">
+      {{#each experience}}
+      <div class="wpo-work-item">
+        <ul>
+          <li class="date">{{this.duration}}</li>
+          <li class="logo bg-white d-flex justify-content-center rounded"><img src="{{this.image}}" alt="{{this.companyname}}" style="width: 130px;height:130px;object-fit:contain"/></li>
+          <li class="position">{{this.position}}
+            <span>{{this.companyname}}, {{this.place}} <span>({{this.type}})</span></span></li>
+          <li class="link"><a href="{{this.website}}" target="_blank">Go to website</a></li>
+        </ul>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="shape-wk">
+    <svg width="1500" height="1500" viewBox="0 0 1500 1500" fill="none">
+      <g opacity="0.45" filter="url(#filter0_f_39_4214)">
+        <circle cx="750" cy="750" r="200"></circle>
+      </g>
+      <defs>
+        <filter
+          id="filter0_f_39_4214"
+          x="0"
+          y="0"
+          width="1500"
+          height="1500"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          ></feBlend>
+          <feGaussianBlur
+            stdDeviation="275"
+            result="effect1_foregroundBlur_39_4212"
+          ></feGaussianBlur>
+        </filter>
+      </defs>
+    </svg>
+  </div>
+</div>
+<!-- end of wpo-work-area -->
+
+<!-- start of wpo-project-area -->
+{{> portfolioslider}}
+<!-- end of wpo-project-area -->
+
+<!--Start wpo-testimonial-section-->
+{{> testimonial}}
+<!--End wpo-testimonial-section-->
+
+<!-- brancds-start -->
+{{> brands}}
+<!-- brancds-end -->

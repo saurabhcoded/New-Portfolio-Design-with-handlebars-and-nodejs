@@ -1,0 +1,116 @@
+<!-- start wpo-page-title -->
+<section class="wpo-page-title">
+  <div class="container">
+    <div class="row">
+      <div class="col col-xs-12">
+        <div class="wpo-breadcumb-wrap">
+          <h2>{{servicedetail.title}}</h2>
+          <ol class="wpo-breadcumb-wrap">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li>{{servicedetail.title}}</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end container -->
+</section>
+<!-- end page-title -->
+<!-- wpo-service-single-area start -->
+<div class="wpo-service-single-area section-padding">
+  <div class="container">
+    <div class="row justify-content-center" >
+      <div class="col-lg-10 col-12">
+        <div class="wpo-service-single-wrap">
+          <div class="wpo-service-single-item">
+            <div class="wpo-service-single-main-img">
+              <img src="{{servicedetail.image}}" class="w-100" alt="{{servicedetail.slug}}" />
+            </div>
+            <div class="wpo-service-single-title">
+              <h3>{{servicedetail.title}}</h3>
+            </div>
+            <p>{{servicedetail.paragraph1}}</p>
+            <p>{{servicedetail.paragraph2}}</p>
+            <p>{{servicedetail.paragraph3}}</p>
+          </div>
+
+          <div class="wpo-service-single-item">
+            <div class="wpo-service-contact-area">
+              <div class="wpo-contact-title">
+                <h2>Have project in mind? Let's discuss</h2>
+                <p>Get in touch with us to see how we can help you with your
+                  project</p>
+              </div>
+              <div class="wpo-contact-form-area">
+                <form
+                  method="post"
+                  class="contact-validation-active"
+                  id="contact-form-main"
+                >
+                  <div class="row">
+                    <div class="col col-lg-6 col-md-6 col-12">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        id="name"
+                        placeholder="Your Name*"
+                      />
+                    </div>
+                    <div class="col col-lg-6 col-md-6 col-12">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        placeholder="Your Email*"
+                      />
+                    </div>
+                    <div class="col col-lg-12 col-12">
+                      <select name="service" class="form-control">
+                        <option
+                          disabled="disabled"
+                          selected=""
+                        >Services</option>
+                        <option>Web Design</option>
+                        <option>Graphics Design</option>
+                        <option>Marketing</option>
+                      </select>
+                    </div>
+                    <div class="fullwidth col col-lg-12 col-12">
+                      <textarea
+                        class="form-control"
+                        name="note"
+                        id="note"
+                        placeholder="Message..."
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="submit-area">
+                    <button type="submit" class="theme-btn">Send Massege</button>
+                    <div id="loader">
+                      <i class="ti-reload"></i>
+                    </div>
+                  </div>
+                  <div class="clearfix error-handling-messages">
+                    <div id="success">Thank you Massage Sended</div>
+                    <div id="error">
+                      Error occurred while sending email. Please try again
+                      later.
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- wpo-service-single-area end -->
+<!-- wpo-partners-area-start -->
+{{> brands}}
+<!-- partners-area-end -->

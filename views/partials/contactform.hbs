@@ -1,0 +1,56 @@
+<div class="wpo-contact-title">
+  <h2>Have Any Question?</h2>
+  <p>Get in touch with me to see how i can help you with your project</p>
+</div>
+<div class="wpo-contact-form-area">
+  <form method="post" action="/contact">
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        placeholder="Your Name*"
+        required
+      />
+    </div>
+    <div>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        placeholder="Your Email*"
+        required
+      />
+    </div>
+    <div>
+      <input
+        type="phone"
+        class="form-control"
+        name="contact"
+        placeholder="Contact"
+        required
+      />
+    </div>
+    <div>
+      <select name="service" class="form-control">
+        <option disabled="disabled" selected="">Services</option>
+        {{#each service}}<option
+            value="{{this.title}}"
+          >{{this.title}}</option>{{/each}}
+      </select>
+    </div>
+    <div class="fullwidth">
+      <textarea
+        class="form-control"
+        name="note"
+        placeholder="Message..."
+      ></textarea>
+    </div>
+    <div class="submit-area">
+      <button type="submit" class="theme-btn-s2">Get in Touch</button>
+      <div id="loader">
+        <i class="ti-reload"></i>
+      </div>
+    </div>
+  </form>
+</div>

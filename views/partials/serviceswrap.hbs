@@ -1,0 +1,50 @@
+<div class="wpo-service-wrap">
+  <div class="row align-items-center justify-content-around">
+    {{#each service}}
+      <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+        <div class="wpo-service-item">
+          <div class="icon">
+            <i class="{{this.icon}}"></i>
+          </div>
+          <h2>{{this.title}}</h2>
+          {{! <p>Explain to you how all this mistaken idea of denouncing pleasure
+            born and give you complete account the system.</p> }}
+          <a href="/services/{{this.slug}}">Learn More</a>
+        </div>
+      </div>
+    {{/each}}
+    {{! <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+      <div class="wpo-service-item">
+        <div class="icon">
+          <i class="fi flaticon-vector"></i>
+        </div>
+        <h2>Graphic Design</h2>
+        <p>Explain to you how all this mistaken idea of denouncing pleasure born
+          and give you complete account the system.</p>
+        <a href="/services/graphic-design">Learn More</a>
+      </div>
+    </div>
+    <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+      <div class="wpo-service-item">
+        <div class="icon">
+          <i class="fi flaticon-add"></i>
+        </div>
+        <h2>UI/UX Design</h2>
+        <p>Explain to you how all this mistaken idea of denouncing pleasure born
+          and give you complete account the system.</p>
+        <a href="/services/ui_ux-design">Learn More</a>
+      </div>
+    </div>
+    <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+      <div class="wpo-service-item">
+        <div class="icon">
+          <i class="fi flaticon-promotion"></i>
+        </div>
+        <h2>SEO</h2>
+        <p>Explain to you how all this mistaken idea of denouncing pleasure born
+          and give you complete account the system.</p>
+        <a href="/services/SEO">Learn More</a>
+      </div>
+    </div> }}
+  </div>
+</div>
